@@ -28,11 +28,29 @@ define('SECONDS_IN_WEEK', SECONDS_IN_DAY * DAYS_IN_WEEK);
 define('SECONDS_IN_MONTH', SECONDS_IN_DAY * DAYS_IN_MONTH);
 define('SECONDS_IN_YEAR', SECONDS_IN_DAY * DAYS_IN_YEAR);
 
-function e($v){echo '<pre>';var_dump($v);echo'</pre>';}
-function ed($v='just die'){e($v);die;}
+if (! function_exists('e')) {
+	function e(){array_map(function ($v) {echo '<pre>';var_dump($v);echo'</pre>';}, func_get_args());}
+	if (! function_exists('ed')) {
+		function ed(){call_user_func_array('e',func_get_args());die; }
+	}
+}
 
-function tmpfn($n=null) { return tempnam(sys_get_temp_dir(), $n ?? 'temp'); }
+if (!function_exists('tmpfn')) {
+	function tmpfn($n='temp') { return tempnam(sys_get_temp_dir(), $n); }
+}
 
 // Yii2 specific
-function qq($q){ if (class_exists('\yii\db\Query')) { return $q->prepare(Yii::$app->db->queryBuilder)->createCommand()->rawSql;} else {return 'No \yii\db\Query class detected'}}
-function qqd($q){e(qq($q));die;}
+
+if (!function_exists('qq')) {
+	function qq($q){
+		if (class_exists('\yii\db\Query')) {
+			return $q->prepare(Yii::$app->db->queryBuilder)->createCommand()->rawSql;
+		} else {
+			return 'No \yii\db\Query class detected'
+		}
+	}
+
+	if (!function_exists('qqd')) {
+		function qqd($q){ ed(qq($q)) }
+	}
+}
