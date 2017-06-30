@@ -46,11 +46,11 @@ if (!function_exists('qq')) {
 		if (class_exists('\yii\db\Query')) {
 			return $q->prepare(Yii::$app->db->queryBuilder)->createCommand()->rawSql;
 		} else {
-			return 'No \yii\db\Query class detected'
+			return 'No \yii\db\Query class detected';
 		}
 	}
 
 	if (!function_exists('qqd')) {
-		function qqd($q){ ed(qq($q)) }
+		function qqd($q){ ed(qq($q)); }
 	}
 }
