@@ -41,7 +41,7 @@ $ composer require rsmike/globals
 or add
 
 ```
-"rsmike/yii2-metafields": "*"
+"rsmike/globals": "*"
 ```
 
 to the `require` section of your `composer.json` file.
