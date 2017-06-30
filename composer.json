@@ -1,0 +1,12 @@
+{
+    "name": "rsmike/globals",
+    "description": "Global functions and constants",
+    "keywords": [
+        "global functions", "seconds", "minutes", "constants"
+    ],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "autoload": {
+        "files": ["functions.php"]
+    }
+}
