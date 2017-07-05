@@ -28,6 +28,8 @@ define('SECONDS_IN_WEEK', SECONDS_IN_DAY * DAYS_IN_WEEK);
 define('SECONDS_IN_MONTH', SECONDS_IN_DAY * DAYS_IN_MONTH);
 define('SECONDS_IN_YEAR', SECONDS_IN_DAY * DAYS_IN_YEAR);
 
+// Debug functions
+
 if (! function_exists('e')) {
 	function e(){array_map(function ($v) {echo '<pre>';var_dump($v);echo'</pre>';}, func_get_args());}
 	if (! function_exists('ed')) {
@@ -38,6 +40,23 @@ if (! function_exists('e')) {
 if (!function_exists('tmpfn')) {
 	function tmpfn($n='temp') { return tempnam(sys_get_temp_dir(), $n); }
 }
+
+if (!function_exists('pl')) {
+    function pl($n, $singular, $plural) {
+        if($n==1) return $singular;
+        if(isset($plural)) return $plural;
+        // check last letter
+        switch(strtolower($singular[strlen($singular)-1])) {
+            case 'y':
+                return substr($singular,0,-1).'ies';
+            case 's':
+                return $singular.'es';
+            default:
+                return $singular.'s';
+        }
+    }
+}
+
 
 // Yii2 specific
 
