@@ -22,6 +22,7 @@
 * `e($variable...)` - preformatted, dump variables
 * `ed($variable...)` - dump variables and die
 * `tmpfn($key='temp')` - generate full path to a temporary file in the temporary directory
+* `pl($n, $singleform, $pluralform)` - generate full path to a temporary file in the temporary directory
 
 ### Yii2 specific
 

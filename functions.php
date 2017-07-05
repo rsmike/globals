@@ -42,9 +42,9 @@ if (!function_exists('tmpfn')) {
 }
 
 if (!function_exists('pl')) {
-    function pl($n, $singular, $plural) {
+    function pl($n, $singular, $plural=null) {
         if($n==1) return $singular;
-        if(isset($plural)) return $plural;
+        if(!empty($plural)) return $plural;
         // check last letter
         switch(strtolower($singular[strlen($singular)-1])) {
             case 'y':
