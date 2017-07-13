@@ -28,6 +28,8 @@ define('SECONDS_IN_WEEK', SECONDS_IN_DAY * DAYS_IN_WEEK);
 define('SECONDS_IN_MONTH', SECONDS_IN_DAY * DAYS_IN_MONTH);
 define('SECONDS_IN_YEAR', SECONDS_IN_DAY * DAYS_IN_YEAR);
 
+define('EMPTY_GIF','data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+
 // Debug functions
 
 if (! function_exists('e')) {

@@ -17,12 +17,15 @@
 * MYSQL_TIME = 'H:i:s'
 * MYSQL_DATETIME = 'Y-m-d H:i:s'
 
+#### Misc
+EMPTY_GIF - inline 1x1 transparent gif. To be used as an "img src"
+
 ### Functions
 
 * `e($variable...)` - preformatted, dump variables
 * `ed($variable...)` - dump variables and die
 * `tmpfn($key='temp')` - generate full path to a temporary file in the temporary directory
-* `pl($n, $singleform, $pluralform)` - generate full path to a temporary file in the temporary directory
+* `pl($n, $singleform, $pluralform)` - simple pluraliser. Plural form can be omitted for simple cases
 
 ### Yii2 specific
 
@@ -30,8 +33,6 @@
 * `qqd(\yii\db\Query)` - prnt SQL and die
 
 ## Installation
-
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 Either run
 
