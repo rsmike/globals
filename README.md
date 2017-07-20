@@ -25,7 +25,7 @@ EMPTY_GIF - inline 1x1 transparent gif. To be used as an "img src"
 * `e($variable...)` - preformatted, dump variables
 * `ed($variable...)` - dump variables and die
 * `tmpfn($key='temp')` - generate full path to a temporary file in the temporary directory
-* `pl($n, $singleform, $pluralform)` - simple pluraliser. Plural form can be omitted for simple cases
+* `pl($n, $singleform, $pluralform)` - simple pluraliser. Plural form can be omitted for simple cases. Replaces # with $n.
 
 ### Yii2 specific
 
