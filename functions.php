@@ -45,18 +45,18 @@ if (!function_exists('tmpfn')) {
 
 if (!function_exists('pl')) {
     function pl($n, $singular, $plural=null) {
-        if($n==1) $res = $singular;
-        if(!empty($plural)) $res = $plural;
+        if($n==1) return str_replace('#', $n, $singular);
+        if(!empty($plural)) return str_replace('#', $n, $plural);
         // check last letter
         switch(strtolower($singular[strlen($singular)-1])) {
             case 'y':
-                $res = substr($singular,0,-1).'ies'; break;
+            	return str_replace('#', $n, substr($singular,0,-1).'ies');
             case 's':
-                $res = $singular.'es'; break;
+	            return str_replace('#', $n, $singular.'es');
             default:
-                $res = $singular.'s';
+    	        return str_replace('#', $n, $singular.'s');
         }
-        return str_replace('#',$n,$res);
+
     }
 }
 
