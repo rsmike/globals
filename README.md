@@ -6,19 +6,19 @@
 
 #### Time intervals
 
-* MONTHS_IN_YEAR, DAYS_IN_WEEK, DAYS_IN_MONTH, DAYS_IN_YEAR,
-* HOURS_IN_DAY, HOURS_IN_WEEK, HOURS_IN_MONTH, HOURS_IN_YEAR,
-* MINUTES_IN_HOUR, MINUTES_IN_DAY, MINUTES_IN_WEEK, MINUTES_IN_MONTH, MINUTES_IN_YEAR,
-* SECONDS_IN_MINUTE, SECONDS_IN_HOUR, SECONDS_IN_DAY, SECONDS_IN_WEEK, SECONDS_IN_MONTH, SECONDS_IN_YEAR
+* `MONTHS_IN_YEAR, DAYS_IN_WEEK, DAYS_IN_MONTH, DAYS_IN_YEAR`
+* `HOURS_IN_DAY, HOURS_IN_WEEK, HOURS_IN_MONTH, HOURS_IN_YEAR`
+* `MINUTES_IN_HOUR, MINUTES_IN_DAY, MINUTES_IN_WEEK, MINUTES_IN_MONTH, MINUTES_IN_YEAR`
+* `SECONDS_IN_MINUTE, SECONDS_IN_HOUR, SECONDS_IN_DAY, SECONDS_IN_WEEK, SECONDS_IN_MONTH, SECONDS_IN_YEAR`
 
 #### Datetime format
 
-* MYSQL_DATE = 'Y-m-d'
-* MYSQL_TIME = 'H:i:s'
-* MYSQL_DATETIME = 'Y-m-d H:i:s'
+* `MYSQL_DATE = 'Y-m-d'`
+* `MYSQL_TIME = 'H:i:s'`
+* `MYSQL_DATETIME = 'Y-m-d H:i:s'`
 
 #### Misc
-EMPTY_GIF - inline 1x1 transparent gif. To be used as an "img src"
+`EMPTY_GIF` - inline 1x1 transparent gif. To be used as an "img src"
 
 ### Functions
 
@@ -26,6 +26,8 @@ EMPTY_GIF - inline 1x1 transparent gif. To be used as an "img src"
 * `ed($variable...)` - dump variables and die
 * `tmpfn($key='temp')` - generate full path to a temporary file in the temporary directory
 * `pl($n, $singleform, $pluralform)` - simple pluraliser. Plural form can be omitted for simple cases. Replaces # with $n.
+* `lines($n)` - split string to array of lines using the newline regexp "\R" 
+
 
 ### Yii2 specific
 

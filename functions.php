@@ -60,6 +60,10 @@ if (!function_exists('pl')) {
     }
 }
 
+if (!function_exists('lines')) {
+	function lines($n) { return preg_split("/\R/",$n,null,PREG_SPLIT_NO_EMPTY)?:[]; }
+}
+
 
 // Yii2 specific
 
