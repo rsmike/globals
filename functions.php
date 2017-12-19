@@ -44,9 +44,10 @@ if (!function_exists('tmpfn')) {
 }
 
 if (!function_exists('pl')) {
-    function pl($n, $singular, $plural=null) {
+    function pl($n, $singular, $plural=null, $none=null) {
+		if (!is_null($none) && empty($n)) return $none;
         if($n==1) return str_replace('#', $n, $singular);
-        if(!empty($plural)) return str_replace('#', $n, $plural);
+        if(!is_null($plural)) return str_replace('#', $n, $plural);
         // check last letter
         switch(strtolower($singular[strlen($singular)-1])) {
             case 'y':

@@ -25,7 +25,7 @@
 * `e($variable...)` - preformatted, dump variables
 * `ed($variable...)` - dump variables and die
 * `tmpfn($key='temp')` - generate full path to a temporary file in the temporary directory
-* `pl($n, $singleform, $pluralform)` - simple pluraliser. Plural form can be omitted for simple cases. Replaces # with $n.
+* `pl($n, $singleform, $pluralform, $ifempty)` - simple pluraliser. Plural form can be omitted for simple cases. Ifempty is optional, too. Replaces # with $n.
 * `lines($n)` - split string to array of lines using the newline regexp "\R" 
 
 
